@@ -1,0 +1,38 @@
+{
+  "application": {
+    "logLevel": "debug"
+  },
+  "api": {
+    "port": 3000,
+    "specifications": {
+      "swaggerDefinition": {
+        "openapi": "3.0.0",
+        "info": {
+          "title": "API Boilerplate",
+          "version": "1.0.0"
+        }
+      },
+      "apis": ["./lib/models/*", "./lib/controllers/*"]
+    }
+  },
+  "authentication": {
+    "secret": "9AgAIQBwXV9qGjvLwFAa0avKiJ2CJ7IqduWJhq92ViwUekwCCT+3fdYoL/qgonzFgZ2a4P8kXU+uECtPB9qsRLbmNHrUsuO1bjoVXlS+xoaNSrQO+ndq4l+J8dHiN9oKhf5Acb8t10xwq9yMCstwBsLQlfdsi9x4RHyBLBCs1+A=",
+    "expiresIn": "86400"
+  },
+  "database": {
+    "client": "mysql",
+    "connection": {
+      "host": "127.0.0.1",
+      "user": "test",
+      "password": "test",
+      "database": "test"
+    },
+    "pool": {
+      "min": 1,
+      "max": 10
+    },
+    "migrations": {
+      "tableName": "knex_migrations"
+    }
+  }
+}
